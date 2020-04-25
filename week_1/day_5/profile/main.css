@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: "Raleway";
+}
+
+.navbar {
+  background: #f97300;
+}
+h1 {
+  color: #f97300;
+}
+
+#text {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  font-size: 20px;
+  font-family: "Raleway";
+  color: gray;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#text p {
+  text-align: left;
+}
+
+#smbtn {
+  background-color: #f97300;
+  border: 2px solid #f97300;
+  box-shadow: none;
+}
+
+/* I was having trouble overriding bootstrap's defualt button colors, hence the two ID's instead of a class... */
+
+#smbtn2 {
+  background-color: #f97300;
+  border: 2px solid #f97300;
+  box-shadow: none;
+}
+
+#round_face {
+  border-radius: 50%;
+  padding-right: 10px;
+}
+
+.vl {
+  border-left: 6px solid #1c8891;
+  height: 425px;
+}
+
+#about_me_paragraph {
+  font-size: 15px;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.bg {
+  height: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../provided_images/headerback.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.is-square {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.orange {
+  color: #f97300;
+}
