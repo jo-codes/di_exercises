@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+}
+
+.g1c1 {
+  background-color: #ff5a01;
+}
+
+.g1c2 {
+  background-color: #ffab5b;
+}
+
+.g1c3 {
+  background-color: #ad3b01;
+}
+
+.g2c1 {
+  background-color: #c6c6c6;
+}
+
+.g2c2 {
+  background-color: #909090;
+}
+
+.g2c3 {
+  background-color: #2e2e2e;
+}
+
+.g3c1 {
+  background-color: #ffffff;
+}
+
+.g3c2 {
+  background-color: #f6686e;
+}
+
+.g3c3 {
+  background-color: #ea0123;
+}
