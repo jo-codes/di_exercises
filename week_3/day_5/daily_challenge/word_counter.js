@@ -3,42 +3,45 @@
 //     Ask the user for several words and save them. Check if the words given are strings
 //     Determine which word has the greatest number of repeated letters and console.log this word.
 
-const checkRepeatLetters = (word) => {
-  let lettersArr = word.split("");
-  let alphabet = "abcdefghijklmnopqrstuvwxyz";
-  alphabet = alphabet.split("");
-  var dupCount = 0;
-  for (x = 0; x < alphabet.length; x++) {
-    for (y = 0; y < lettersArr.length; y++) {
-      if (alphabet[x] == lettersArr[y]) {
-        dupCount++;
+const wordChecker = (word) => {
+  let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+  let letters = word.split("");
+  let totalDuplicates = 0;
+
+  for (x in alphabet) {
+    for (y in letters) {
+      if (alphabet[x] === letters[y]) {
+        if (letters.filter((n) => n == alphabet[x]).length > 1) {
+          totalDuplicates++;
+        }
       }
     }
   }
-  dupCount = dupCount - word.length;
-  console.log(dupCount);
+  return totalDuplicates;
 };
 
-const wordsToCheck = [];
+let wordsToCheck = [];
 
 const promptUserForWords = (numOfWords) => {
   for (x = 1; x < numOfWords + 1; x++) {
     wordsToCheck.push(prompt(`Gimme word ${x} of ${numOfWords}`));
   }
 };
-promptUserForWords(3);
+
+let highestCount = 0;
+let higestWord = ["placeholder"];
+
+wordsToCheck = ["time", "too", "gooooo"];
 
 for (x in wordsToCheck) {
-  checkRepeatLetters(wordsToCheck[x]);
+  let currentWordCount = wordChecker(wordsToCheck[x]);
+  if (currentWordCount > highestCount) {
+    console.log(currentWordCount);
+
+    highestCount = currentWordCount;
+    highestWord = wordsToCheck[x];
+    console.log(highestWord);
+  }
 }
 
-// var highest = 0;
-// var highestWord = "";
-
-// for (x in wordsToCheck) {
-//   let result = checkRepeatLetters(wordsToCheck[x]);
-//   if (result > highest) {
-//     highest = result;
-//     highestWord = wordsToCheck[x];
-//   }
-// }
+// promptUserForWords(3);
