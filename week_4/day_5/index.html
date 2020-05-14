@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      button {
+        width: 70px;
+        height: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calc">
+      <div class="disp">0</div>
+
+      <div class="keys">
+        <button type="button" class="zed num" name="button">
+          0
+        </button>
+
+        <button type="button" class="one num" name="button">
+          1
+        </button>
+        <button type="button" class="two num" name="button">
+          2
+        </button>
+        <button type="button" class="three num" name="button">
+          3
+        </button>
+        <button type="button" class="four num" name="button">
+          4
+        </button>
+        <button type="button" class="five num" name="button">
+          5
+        </button>
+        <button type="button" class="six num" name="button">
+          6
+        </button>
+        <button type="button" class="seven num" name="button">
+          7
+        </button>
+        <button type="button" class="eight num" name="button">
+          8
+        </button>
+        <button type="button" class="nine num" name="button">
+          9
+        </button>
+
+        <button
+          type="button"
+          class="deci op"
+          name="button"
+          data-action="decimal"
+        >
+          .
+        </button>
+
+        <button type="button" class="plus op" data-action="add" name="button">
+          +
+        </button>
+        <button
+          type="button"
+          class="minus op"
+          data-action="subtract"
+          name="button"
+        >
+          -
+        </button>
+        <button type="button" class="X op" data-action="multiply" name="button">
+          X
+        </button>
+        <button
+          type="button"
+          class="slash op"
+          data-action="divide"
+          name="button"
+        >
+          /
+        </button>
+        <button
+          type="button"
+          class="equal"
+          data-action="calculate"
+          name="button"
+        >
+          =
+        </button>
+        <button type="button" class="reset" data-action="reset" name="button">
+          reset
+        </button>
+        <button type="button" class="clear" data-action="clear" name="button">
+          clear
+        </button>
+      </div>
+    </div>
+    <script src="./main.js" charset="utf-8"></script>
+  </body>
+</html>
