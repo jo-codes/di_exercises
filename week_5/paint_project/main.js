@@ -39,6 +39,11 @@ const generateColors = (target) => {
 };
 
 generateColors('colorPicker');
+
+document.getElementById('mix').onclick = function () {
+  generateColors('colorPicker');
+};
+
 // i'm deleting the px argument. I'm going to specify in CSS for both individually. I want to set a minmax for each div... how to do these things?
 
 // CURRENT, work out JS logic for generating a palette of colors. or rather work out functions individually and figure out how you will wire them together.
