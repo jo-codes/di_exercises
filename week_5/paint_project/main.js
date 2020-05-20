@@ -25,5 +25,27 @@ function makeRows(rows, cols, location) {
 makeRows(7, 3, colorPicker);
 makeRows(21, 29, drawingGrid);
 
+const generateColors = (target) => {
+  let c = document.getElementById(target).childNodes;
+  for (x = 1; x < c.length; x++) {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    var color = `rgb(${r},${g},${b})`;
+    var currentNode = c[x];
+    console.log(color);
+    currentNode.style.backgroundColor = color;
+  }
+};
+
+generateColors('colorPicker');
 // i'm deleting the px argument. I'm going to specify in CSS for both individually. I want to set a minmax for each div... how to do these things?
 
+// CURRENT, work out JS logic for generating a palette of colors. or rather work out functions individually and figure out how you will wire them together.
+
+// ok, steps. start with a function, generateColors(colorpicker)... cant you manipulate this just like any other set of divs? once they're there?
+
+// const generateColors = (target... what's target?
+// target.forEachNode... needs work
+
+// #colorpicker.children) => { var r, g, b = math.random(255) var color = `rgb(${},${},${})` ... this needs to be in loop } append style?. ok, got function. let's duck.
