@@ -33,7 +33,6 @@ const generateColors = (target) => {
     var b = Math.floor(Math.random() * 256);
     var color = `rgb(${r},${g},${b})`;
     var currentNode = c[x];
-    console.log(color);
     currentNode.style.backgroundColor = color;
   }
 };
@@ -54,3 +53,30 @@ document.getElementById('mix').onclick = function () {
 // target.forEachNode... needs work
 
 // #colorpicker.children) => { var r, g, b = math.random(255) var color = `rgb(${},${},${})` ... this needs to be in loop } append style?. ok, got function. let's duck.
+
+// YOU ARE HERE <><><><><><><><><>
+// need to make function to add event listeners to every node. this will be used for both colors and for drawing. it will also be reapplied when you clear canvas or mix
+// I'm going to first try to get an onclick that console logs it's own color.
+// YOU ARE HERE <><><><><><><><><>
+
+let displayColor = (node) => {
+  console.log(node);
+};
+
+let addOnclicks = (target) => {
+  let c = document.getElementById(target).childNodes;
+  for (x = 0; x < c.length; x++) {
+    var current = c[x];
+    current.setAttribute(`onclick`, `fetchRGB(this)`);
+  }
+};
+
+let fetchRGB = (e) => console.log(e.style.backgroundColor);
+
+addOnclicks('colorPicker');
+
+// you added onclicks, you have a display color function that you will later change to create an ondrag for the second grid (that part will be easy) what this really is is a problem of not understanding "this"
+
+// small functions. one to loop through and add an onclick class? to each element after generation calling to a function in this file that simply prints color, that's it
+
+// it's apparent you're blindly stabbing in the dark. I want to loop through onclicks adding an event listener. that listener calls a function. the function should set a variable to the clicked color and console.log it. the question is where should that variable be stored? wait... I have to add this function as an onclick to the color

@@ -6,6 +6,8 @@ what variables do I have to pass to my CSS? I can pass a class, or a CSS variabl
 
 /* You can't keep randomly switching things hoping to align stuff correctly with css grid. stop and research */
 
+/* you can pass another css variable and make a class to toggle onclick to change colors... */
+
 :root {
   --grid-cols: 1;
   --grid-rows: 1;
