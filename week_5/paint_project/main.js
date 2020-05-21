@@ -1,5 +1,7 @@
 // Paint Project
 
+var globalColor = '';
+
 const colorPicker = document.getElementById('colorPicker');
 const drawingGrid = document.getElementById('drawingGrid');
 
@@ -24,25 +26,25 @@ makeRows(21, 29, drawingGrid);
 let addOnclicks = (target, func) => {
   let c = document.getElementById(target).childNodes;
   for (x = 0; x < c.length; x++) {
-    var current = c[x];
+    let current = c[x];
     current.setAttribute(`onclick`, func);
   }
 };
 
-// this function currently just console logs, but will set global variable soon
+let fetchRGB = (e) => {
+  globalColor = e.style.backgroundColor;
+};
 
-let fetchRGB = (e) => console.log(e.style.backgroundColor);
-
-// this is where the problem lies, passing fetchRGB...
+// generates colors and calls addOnclicks to add fetchRGB function to all new colored tiles
 
 const generateColors = (target) => {
   let c = document.getElementById(target).childNodes;
   for (x = 0; x < c.length; x++) {
-    var r = Math.floor(Math.random() * 256);
-    var g = Math.floor(Math.random() * 256);
-    var b = Math.floor(Math.random() * 256);
-    var color = `rgb(${r},${g},${b})`;
-    var currentNode = c[x];
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    let color = `rgb(${r},${g},${b})`;
+    let currentNode = c[x];
     currentNode.style.backgroundColor = color;
   }
   addOnclicks(target, `fetchRGB(this)`);
@@ -58,8 +60,16 @@ document.getElementById('mix').onclick = function () {
   generateColors('colorPicker');
 };
 
-// temp func, not sure where to go with this
+addOnclicks('drawingGrid', 'displayColor(this)');
 
-let displayColor = (node) => {
-  console.log(node);
+document.getElementById('clear').onclick = function () {
+  let c = document.getElementById('drawingGrid').childNodes;
+  for (x = 0; x < c.length; x++) {
+    let currentNode = c[x];
+    currentNode.style.backgroundColor = 'rgb(255,255,255)';
+  }
+};
+
+let displayColor = (e) => {
+  e.style.backgroundColor = globalColor;
 };
