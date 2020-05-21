@@ -1,12 +1,6 @@
 /* Paint Project */
 
-/* rather than trying to randomly type, let's see what I'm actually trying to do here.
-
-what variables do I have to pass to my CSS? I can pass a class, or a CSS variable. What I really want to do is pass in the entire argument to the container. ie grid-temp-rows with a 10 px spec. just needs another var */
-
-/* You can't keep randomly switching things hoping to align stuff correctly with css grid. stop and research */
-
-/* you can pass another css variable and make a class to toggle onclick to change colors... */
+/* Global vars from main.js */
 
 :root {
   --grid-cols: 1;
@@ -70,16 +64,3 @@ html {
   border: 1px solid #ddd;
   text-align: center;
 }
-/* CURRENT
-need to set a repeat minmax on sizing to fill whole screen!
-
-Ok. Screen works, buttons have to be within color picker div. 
-
-what do I have?
-
-one container with two columns and one row
-
-column one needs to be a flexbox with div "buttons" being ... no. needs to be a grid with two rows, one 1fr and the rest 7fr or so. that will make it fully responsive
-
-
-*/
