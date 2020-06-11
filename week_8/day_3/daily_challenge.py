@@ -55,14 +55,3 @@ class Chromosome(Gene):
             x += 1
 
         return self.genes
-
-
-dingo = Chromosome()
-wombat = Chromosome()
-jeans = Chromosome()
-levis = Chromosome()
-
-dingo.mutate()
-wombat.mutate()
-jeans.mutate()
-levis.mutate()
