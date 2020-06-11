@@ -12,4 +12,57 @@
 #     Create a new class called `Organismè that accepts a DNA object and a environement parameter that sets the probability for its DNA to mutate.
 #     Instantiate a number of Organims and let them mutate until one gets to a DNA is only made of 1s. Then stop and record the number of generations (iterations) it took.
 
-# Write your results in you personal biology research notebook and tell us your conclusion :). 
+# Write your results in you personal biology research notebook and tell us your conclusion :).
+
+# gene x 10. let's just code a gene class
+import random
+
+
+class Gene():
+    flipped = 42
+
+    def __init__(self):
+        pass
+
+    def mutate(self):
+        if random.choice([0, 1]):
+            self.flipped = 1
+        else:
+            self.flipped = 0
+
+        return self.flipped
+
+
+class Chromosome(Gene):
+    genes = []
+    i = 0
+    while i < 10:
+        gene = Gene()
+        genes.append(gene)
+        i += 1
+
+    def __init__(self):
+        pass
+
+    def mutate(self):  # overiding other mutate
+        x = 0
+
+        while x < 10:
+            if random.choice([0, 1]):
+                self.genes[x] = 1
+            else:
+                self.genes[x] = 0
+            x += 1
+
+        return self.genes
+
+
+dingo = Chromosome()
+wombat = Chromosome()
+jeans = Chromosome()
+levis = Chromosome()
+
+dingo.mutate()
+wombat.mutate()
+jeans.mutate()
+levis.mutate()
