@@ -15,6 +15,7 @@
 # Write your results in you personal biology research notebook and tell us your conclusion :).
 
 # gene x 10. let's just code a gene class
+
 import random
 
 
@@ -33,18 +34,17 @@ class Gene():
         return self.flipped
 
 
-class Chromosome(Gene):
+class Chromosome():
     genes = []
-    i = 0
-    while i < 10:
-        gene = Gene()
-        genes.append(gene)
-        i += 1
 
     def __init__(self):
-        pass
+        i = 0
+        while i < 10:
+            gene = Gene().mutate()
+            self.genes.append(gene)
+            i += 1
 
-    def mutate(self):  # overiding other mutate
+    def mutate(self):
         x = 0
 
         while x < 10:
@@ -55,3 +55,27 @@ class Chromosome(Gene):
             x += 1
 
         return self.genes
+
+
+class DNA():
+    strand = []
+
+    def __init__(self):
+        i = 0
+        while i < 10:
+            chromosome = Chromosome().mutate()
+            for x in chromosome:
+                self.strand.append(x)
+            i += 1
+
+    def mutate(self):
+        return self.strand
+
+
+dna = DNA()
+time = 0
+while 0 in dna.mutate():
+    time += 1
+    if time % 100 == 0:
+        print(".", end=" ")
+print("DNA strand found")
