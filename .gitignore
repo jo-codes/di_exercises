@@ -7,6 +7,9 @@
 
 # temp files for brainstorming / testing
 scratch.py
+mac.txt
+pwd.txt
+channel/
 
 ### Django ###
 *.log

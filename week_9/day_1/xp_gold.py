@@ -49,7 +49,7 @@ class ForceWielder():
     def make_jedi(self):
         self.is_jedi = True
         print(f"{self.name} has seen the light!")
-        self.name = f"Sir {self.name}"
+        self.name = f"{self.name} Skywalker"
         print(f"He is now {self.name}")
         self.wisdom += 10
         self.merge_power()
@@ -76,16 +76,16 @@ class ForceWielder():
             return "win"
 
 
-luke = ForceWielder("luke").make_jedi()
-anniken = ForceWielder("anniken").make_jedi()
-ray = ForceWielder("ray").make_jedi()
-mole = ForceWielder("mole").make_sith()
-vader = ForceWielder("vader").make_sith()
-badguy = ForceWielder("badguy").make_sith()
+cloud = ForceWielder("cloud").make_jedi()
+tifa = ForceWielder("tifa").make_jedi()
+barret = ForceWielder("barret").make_jedi()
+sephiroth = ForceWielder("sephiroth").make_sith()
+sin = ForceWielder("sin").make_sith()
+kuja = ForceWielder("kuja").make_sith()
 
 
-arr_of_jedi = [luke, anniken, ray]
-arr_of_badguys = [mole, vader, badguy]
+arr_of_jedi = [cloud, tifa, barret]
+arr_of_badguys = [sephiroth, sin, kuja]
 
 
 fights = 0
@@ -102,3 +102,5 @@ while len(arr_of_badguys) != 0:
     else:
         print(f"{dark_fighter.name} has been defeated")
         arr_of_badguys.pop(0)
+
+# I was unable to find instructions to this exercise on di-learning again...
