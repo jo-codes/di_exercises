@@ -10,6 +10,7 @@ scratch.py
 mac.txt
 pwd.txt
 channel/
+stranger.txt
 
 ### Django ###
 *.log
