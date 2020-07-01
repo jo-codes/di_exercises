@@ -6,22 +6,30 @@
 
 # Using his technique, try to decode this matrix:
 
-#     7 3
-#     Tsi
-#     h%x
-#     i #
-#     sM 
-#     $a 
-#     #t%
-#     ir!
+matrix = [
+    ["7 3"],
+    ["Tsi"],
+    ["h%x"],
+    ["i #"],
+    ["sM "],
+    ["$a "],
+    ["#t%"],
+    ["ir!"]
+]
 
-# Bonus challenge (algo)
+index = matrix[0]
+width = len(index[0])
+length = len(matrix)
+message = ""
 
-# Here is a python code that generate a list of 20000 random numbers, called list_of_numbers.
+i = 0
+while i < width:
+    for line in matrix:
+        message += line[0][i]
+    i += 1
 
-# Extend this code to guess how many couples of numbers in list_of_numbers sum to target_number.
+for char in message:
+    if not char.isalnum():
+        message = message.replace(char, " ")
 
-# import random
-
-# list_of_numbers = [random.randint(0, 10000) for _ in range(20000)]
-# target_number   = 3728
+print(message)
