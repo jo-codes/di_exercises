@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/products.css') }}">    
+</head>
+<body>
+
+     <img src="{{ url_for('static',filename=product['ProductPicUrl']) }}"/>
+            <p>{{ product['ProductId'] }} (${{ product['Price'] }})</p>
+            <p>{{ product['Description'] }}</p>
+            <button>add to cart</button>
+      
+</body>
+</html>

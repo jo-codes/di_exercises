@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/products.css') }}">    
+</head>
+<body>
+
+<div class="items">
+<ul class="products-list">
+       {% for product in products %}
+        <li class="product">
+        <a href="/item/{{ loop.index - 1 }}"><img src="{{ url_for('static',filename=product['ProductPicUrl']) }}"/></a>
+            <p>{{ product['ProductId'] }} (${{ product['Price'] }})</p>
+            <p>{{ product['Description'] }}</p>
+        </li>
+        {% endfor %}
+</ul>
+</div>
+
+</body>
+</html>

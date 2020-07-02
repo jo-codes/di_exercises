@@ -19,3 +19,4 @@
 # Provide a meaningful word frequency insight (meaning if ‘the’ is the most used word it is no surprise, try to come up with a way to get something better).
 
 # Note: Feel free to implement every attribute or method or function to succeed, be creative
+
