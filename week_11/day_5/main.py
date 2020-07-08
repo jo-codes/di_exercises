@@ -10,17 +10,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello, World!'
+    return render_template('navbar.html')
 
 
 @app.route('/products')
 def list_products():
-    return render_template('products.jinja', products=products)
+    return render_template('products.html', products=products)
 
 
 @app.route('/item/<item>')
 def show_item(item):
-    return render_template('item.jinja', product=products[int(item)])
+    return render_template('item.html', product=products[int(item)])
 
 
 app.run(debug=True)
