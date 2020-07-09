@@ -18,6 +18,11 @@ def list_products():
     return render_template('products.html', products=products)
 
 
+@app.route('/home')
+def show_sales():
+    return render_template('home.html')
+
+
 @app.route('/item/<item>')
 def show_item(item):
     return render_template('item.html', product=products[int(item)])
