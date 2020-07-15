@@ -1,0 +1,1 @@
+This folder used to be a working copy of the shopping cart project in week 12 day 5. I've since moved everything. I've kept a copy of products.json here in case I should need it.
