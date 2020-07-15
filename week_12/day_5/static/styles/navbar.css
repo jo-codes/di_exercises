@@ -1,0 +1,17 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.rounded-circle {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  font-size: 1.5em;
+  line-height: 4.5em;
+  text-align: center;
+  color: #fff;
+  background: lightblue;
+  font-family: cursive;
+}
